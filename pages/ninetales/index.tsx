@@ -1,10 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "../../styles/ninetales.module.css";
 import ninetales from "../../assets/ninetales.svg";
 import Image from "next/image";
 import iceType from "../../assets/iceType.svg";
 import fairyType from "../../assets/fairyType.svg";
 import Head from "next/head";
+import PokemonHeader from "../../components/PokemonHeader";
+import PokemonInfo from "../../components/PokemonInfo";
+import PokemonStats from "../../components/PokemonStats";
+import PokemonType from "../../components/PokemonType";
+
+const pokemonStats = {
+  hp: "150",
+  attack: "100",
+  defense: "120",
+  spatk: "1",
+  spdef: "1",
+  speed: "90",
+};
+
+const pokemonInfo = {
+  region: 'ALOLAN',
+  height: '1.1 m',
+  weight: '19.9 kg'
+}
 
 const Ninetales: React.FC = () => {
   return (
@@ -14,54 +33,26 @@ const Ninetales: React.FC = () => {
         <link rel="icon" href="/ninetalesIcon.ico" />
       </Head>
       <div className={styles.main}>
-        <div className={styles.container}>
-          <div>
-            <h2 className={styles.pokemonNumber}>Nº 038</h2>
-            <h1 className={styles.title}>Ninetales</h1>
-          </div>
-
+      <div className={styles.container}>
+          <PokemonHeader name={"Ninetales"} number={"038A"} />
           <div className={styles.infoContainer}>
-            <p className={styles.verticalText}>REGION: ALOLAN</p>
-            <div>
-              <p>Height: 1.1 m</p>
-              <p>Weight: 19.9 kg</p>
-            </div>
+            <PokemonInfo info={pokemonInfo} />
             <div className={styles.pokemonType}>
-              <div className="teste1">
-                <Image src={iceType} alt={"icetype"} height="64" />
-                <Image src={fairyType} alt={"fairyType"} height="64" />
-              </div>
-              <div className={styles.testep}>
-                <div className={styles.pokemonStats}>
-                  <h1>Base stats:</h1>
-                  <div className={styles.statsContainer}>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>HP:&nbsp;</strong> 95
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>ATTACK:&nbsp;</strong> 65
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>DEFENSE:&nbsp;</strong> 130
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SP. ATK:&nbsp;</strong> 60
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SP. DEF:&nbsp;</strong> 130
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SPEED:&nbsp;</strong> 65
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <PokemonType>
+                <Image
+                  src={iceType}
+                  alt={"iceType"}
+                  height={64}
+                  width={64}
+                />
+                <Image
+                  src={fairyType}
+                  alt={"fairyType"}
+                  height={64}
+                  width={64}
+                />
+              </PokemonType>
+              <PokemonStats stats={pokemonStats} />
             </div>
           </div>
 

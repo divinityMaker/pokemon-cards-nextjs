@@ -1,12 +1,34 @@
 import React from "react";
-import styles from "../../styles/giratina.module.css";
-import ninetales from "../../assets/giratina.svg";
+
+import Head from "next/head";
 import Image from "next/image";
+
+import PokemonHeader from "../../components/PokemonHeader";
+import PokemonStats from "../../components/PokemonStats";
+import PokemonType from "../../components/PokemonType";
+import PokemonInfo from "../../components/PokemonInfo";
+
+import styles from "../../styles/giratina.module.css";
+import giratina from "../../assets/giratina.svg";
 import ghostType from "../../assets/ghostType.svg";
 import dragonType from "../../assets/dragonType.svg";
-import Head from "next/head";
 
-const Ninetales: React.FC = () => {
+const pokemonStats = {
+  hp: "150",
+  attack: "100",
+  defense: "120",
+  spatk: "1",
+  spdef: "1",
+  speed: "90",
+};
+
+const pokemonInfo = {
+  region: "DISTORTION WORLD",
+  height: "4.5 m",
+  weight: "750.0 kg",
+};
+
+const Giratina: React.FC = () => {
   return (
     <>
       <Head>
@@ -15,65 +37,36 @@ const Ninetales: React.FC = () => {
       </Head>
       <div className={styles.main}>
         <div className={styles.container}>
-          <div>
-            <h2 className={styles.pokemonNumber}>Nº 038</h2>
-            <h1 className={styles.title}>Giratina</h1>
-          </div>
-
+          <PokemonHeader name={"Giratina"} number={"487"} />
           <div className={styles.infoContainer}>
-            <p className={styles.verticalText}>REGION: DISTORTION WORLD</p>
-            <div>
-              <p>Height: 4.5 m</p>
-              <p>Weight: 750.0 kg</p>
-            </div>
+            <PokemonInfo info={pokemonInfo} />
             <div className={styles.pokemonType}>
-              <div className={styles.teste1}>
-                <Image src={ghostType} alt={"ghostype"} height="64" width={64} />
-                <Image src={dragonType} alt={"dragontype"} height="64" width={64} />
-              </div>
-              <div className={styles.testep}>
-                <div className={styles.pokemonStats}>
-                  <h1>Base stats:</h1>
-                  <div className={styles.statsContainer}>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>HP:&nbsp;</strong> 150
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>ATTACK:&nbsp;</strong> 100
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>DEFENSE:&nbsp;</strong> 120
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SP. ATK:&nbsp;</strong> 1
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SP. DEF:&nbsp;</strong> 1
-                    </div>
-                    <div className={styles.individualStats}>
-                      {" "}
-                      <strong>SPEED:&nbsp;</strong> 90
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <PokemonType>
+                <Image
+                  src={ghostType}
+                  alt={"ghostype"}
+                  height={64}
+                  width={64}
+                />
+                <Image
+                  src={dragonType}
+                  alt={"dragontype"}
+                  height={64}
+                  width={64}
+                />
+              </PokemonType>
+              <PokemonStats stats={pokemonStats} />
             </div>
           </div>
 
-          <div className={styles.teste}>
+          <div>
             <Image
+              priority={true}
               className={styles.image}
-              src={ninetales}
-              alt={"ninetales image"}
+              src={giratina}
+              alt={"giratina image"}
             />
-          </div>
 
-          <div className={styles.teste}>
             <h1 className={styles.japoneseName}>ギラティナ</h1>
           </div>
         </div>
@@ -82,4 +75,4 @@ const Ninetales: React.FC = () => {
   );
 };
 
-export default Ninetales;
+export default Giratina;

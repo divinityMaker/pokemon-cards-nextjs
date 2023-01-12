@@ -1,0 +1,66 @@
+.pokemonNumber {
+  font-size: 1rem;
+}
+
+.pokemonName {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.pokemonStats {
+  display: none;
+}
+
+.pokemonTypeNodes {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.infoContainer {
+    display: flex;
+    gap: 3.5rem;
+}
+
+.verticalText {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+@media only screen and (min-width: 1024px) {
+  .pokemonStatsContainer {
+    position: relative;
+  }
+
+  .pokemonStats {
+    display: block;
+    width: 180px;
+    height: 100%;
+  }
+
+  .statsContainer {
+    padding-left: 1.563rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .statsContainer::before {
+    content: "";
+    height: 80%;
+    opacity: 60%;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    left: 2px;
+  }
+
+  .individualStats {
+    font-size: 0.8rem;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: white;
+    color: black;
+  }
+}
