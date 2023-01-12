@@ -1,35 +1,35 @@
-import React, { useEffect } from "react";
-import styles from "../../styles/ninetales.module.css";
-import ninetales from "../../assets/ninetales.svg";
+import React from "react";
+import styles from "../../styles/giratina.module.css";
+import ninetales from "../../assets/giratina.svg";
 import Image from "next/image";
-import iceType from "../../assets/iceType.svg";
-import fairyType from "../../assets/fairyType.svg";
+import ghostType from "../../assets/ghostType.svg";
+import dragonType from "../../assets/dragonType.svg";
 import Head from "next/head";
 
 const Ninetales: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Ninetales card</title>
-        <link rel="icon" href="/ninetalesIcon.ico" />
+        <title>Giratina card</title>
+        <link rel="icon" href="/giratinaIcon.ico" />
       </Head>
       <div className={styles.main}>
         <div className={styles.container}>
           <div>
             <h2 className={styles.pokemonNumber}>Nº 038</h2>
-            <h1 className={styles.title}>Ninetales</h1>
+            <h1 className={styles.title}>Giratina</h1>
           </div>
 
           <div className={styles.infoContainer}>
-            <p className={styles.verticalText}>REGION: ALOLAN</p>
+            <p className={styles.verticalText}>REGION: DISTORTION WORLD</p>
             <div>
-              <p>Height: 1.1 m</p>
-              <p>Weight: 19.9 kg</p>
+              <p>Height: 4.5 m</p>
+              <p>Weight: 750.0 kg</p>
             </div>
             <div className={styles.pokemonType}>
-              <div className="teste1">
-                <Image src={iceType} alt={"icetype"} height="64" />
-                <Image src={fairyType} alt={"fairyType"} height="64" />
+              <div className={styles.teste1}>
+                <Image src={ghostType} alt={"ghostype"} height="64" width={64} />
+                <Image src={dragonType} alt={"dragontype"} height="64" width={64} />
               </div>
               <div className={styles.testep}>
                 <div className={styles.pokemonStats}>
@@ -37,27 +37,27 @@ const Ninetales: React.FC = () => {
                   <div className={styles.statsContainer}>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>HP:&nbsp;</strong> 95
+                      <strong>HP:&nbsp;</strong> 150
                     </div>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>ATTACK:&nbsp;</strong> 65
+                      <strong>ATTACK:&nbsp;</strong> 100
                     </div>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>DEFENSE:&nbsp;</strong> 130
+                      <strong>DEFENSE:&nbsp;</strong> 120
                     </div>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>SP. ATK:&nbsp;</strong> 60
+                      <strong>SP. ATK:&nbsp;</strong> 1
                     </div>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>SP. DEF:&nbsp;</strong> 130
+                      <strong>SP. DEF:&nbsp;</strong> 1
                     </div>
                     <div className={styles.individualStats}>
                       {" "}
-                      <strong>SPEED:&nbsp;</strong> 65
+                      <strong>SPEED:&nbsp;</strong> 90
                     </div>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Ninetales: React.FC = () => {
           </div>
 
           <div className={styles.teste}>
-            <h1 className={styles.japoneseName}>キュウコン</h1>
+            <h1 className={styles.japoneseName}>ギラティナ</h1>
           </div>
         </div>
       </div>

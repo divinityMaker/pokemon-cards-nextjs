@@ -2,7 +2,7 @@
 
 .main {
     font-family: 'Inter', sans-serif;
-    background-color: var(--ninetales-background-color);
+    background-color: var(--giratina-background-color);
     height: auto;
     width: auto;
     display: flex;
@@ -41,10 +41,10 @@
 }
 
 .image {
-    top: 40%;
+    top: 45%;
     position: absolute;
-    height: 22rem;
-    width: 17rem;
+    height: 20rem;
+    width: 16rem;
 }
 
 .pokemonType {
