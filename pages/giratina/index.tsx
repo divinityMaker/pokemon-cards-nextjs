@@ -7,6 +7,9 @@ import PokemonHeader from "../../components/PokemonHeader";
 import PokemonStats from "../../components/PokemonStats";
 import PokemonType from "../../components/PokemonType";
 import PokemonInfo from "../../components/PokemonInfo";
+import PokemonContainer from "../../components/PokemonContainer";
+import PokemonRightPart from "../../components/PokemonRightPart";
+import PokemonJaponeseName from "../../components/PokemonJaponeseName";
 
 import styles from "../../styles/giratina.module.css";
 import giratina from "../../assets/giratina.svg";
@@ -36,11 +39,10 @@ const Giratina: React.FC = () => {
         <link rel="icon" href="/giratinaIcon.ico" />
       </Head>
       <div className={styles.main}>
-        <div className={styles.container}>
+        <PokemonContainer>
           <PokemonHeader name={"Giratina"} number={"487"} />
-          <div className={styles.infoContainer}>
             <PokemonInfo info={pokemonInfo} />
-            <div className={styles.pokemonType}>
+            <PokemonRightPart>
               <PokemonType>
                 <Image
                   src={ghostType}
@@ -56,20 +58,15 @@ const Giratina: React.FC = () => {
                 />
               </PokemonType>
               <PokemonStats stats={pokemonStats} />
-            </div>
-          </div>
-
-          <div>
-            <Image
-              priority={true}
-              className={styles.image}
-              src={giratina}
-              alt={"giratina image"}
-            />
-
-            <h1 className={styles.japoneseName}>ギラティナ</h1>
-          </div>
-        </div>
+            </PokemonRightPart>
+          <Image
+            priority
+            className={styles.image}
+            src={giratina}
+            alt={"giratina image"}
+          />
+          <PokemonJaponeseName name={'ギラティナ'} />
+        </PokemonContainer>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
-import styles from '../../styles/Card.module.css'
+
+import styles from '../../styles/Card.module.css';
 
 interface Data {
     region: string;
@@ -15,7 +16,7 @@ const PokemonInfo: React.FC<PokemonInfoProps> = ({info}) => {
   return (
     <div className={styles.infoContainer}>
       <p className={styles.verticalText}>REGION: {info.region}</p>
-      <div>
+      <div className={styles.info}>
         <p>Height: {info.height}</p>
         <p>Weight: {info.weight}</p>
       </div>

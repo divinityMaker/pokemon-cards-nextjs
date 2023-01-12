@@ -17,8 +17,8 @@
 }
 
 .infoContainer {
-    display: flex;
-    gap: 3.5rem;
+  display: flex;
+  gap: 3.5rem;
 }
 
 .verticalText {
@@ -26,7 +26,40 @@
   text-orientation: mixed;
 }
 
+.pokemonContainer {
+  width: 240px;
+  height: 37.5rem;
+  padding: 6.438rem 0 0 0;
+  color: #ffffff;
+  position: relative;
+}
+
+.pokemonRightSide {
+  display: flex;
+  position: absolute;
+  top: 16rem;
+  left: 6rem;
+}
+
+.info {
+  display: block;
+}
+
+.japoneseName {
+  position: absolute;
+  bottom: 0;
+  font-size: 3rem;
+  color: #000000;
+  opacity: 0.6;
+  width: auto;
+}
+
 @media only screen and (min-width: 1024px) {
+  .pokemonContainer {
+    width: 1000px;
+    padding: 8rem;
+  }
+
   .pokemonStatsContainer {
     position: relative;
   }
@@ -62,5 +95,25 @@
     border-radius: 1rem;
     background-color: white;
     color: black;
+  }
+
+  .pokemonRightSide {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 11rem;
+    left: 78%; /* 80rem */
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .japoneseName {
+    font-size: 5rem;
+    bottom: 18rem;
+    left: 10rem;
   }
 }

@@ -1,29 +1,35 @@
 import React from "react";
-import styles from "../../styles/ninetales.module.css";
-import ninetales from "../../assets/ninetales.svg";
-import Image from "next/image";
-import iceType from "../../assets/iceType.svg";
-import fairyType from "../../assets/fairyType.svg";
+
 import Head from "next/head";
+import Image from "next/image";
+
 import PokemonHeader from "../../components/PokemonHeader";
-import PokemonInfo from "../../components/PokemonInfo";
 import PokemonStats from "../../components/PokemonStats";
 import PokemonType from "../../components/PokemonType";
+import PokemonInfo from "../../components/PokemonInfo";
+import PokemonContainer from "../../components/PokemonContainer";
+import PokemonRightPart from "../../components/PokemonRightPart";
+import PokemonJaponeseName from "../../components/PokemonJaponeseName";
+
+import styles from "../../styles/ninetales.module.css";
+import ninetales from "../../assets/ninetales.svg";
+import iceType from "../../assets/iceType.svg";
+import fairyType from "../../assets/fairyType.svg";
 
 const pokemonStats = {
-  hp: "150",
-  attack: "100",
-  defense: "120",
+  hp: "73",
+  attack: "67",
+  defense: "75",
   spatk: "1",
   spdef: "1",
-  speed: "90",
+  speed: "109",
 };
 
 const pokemonInfo = {
-  region: 'ALOLAN',
-  height: '1.1 m',
-  weight: '19.9 kg'
-}
+  region: "ALOLAN",
+  height: "1.1 m",
+  weight: "19.9 kg",
+};
 
 const Ninetales: React.FC = () => {
   return (
@@ -33,41 +39,24 @@ const Ninetales: React.FC = () => {
         <link rel="icon" href="/ninetalesIcon.ico" />
       </Head>
       <div className={styles.main}>
-      <div className={styles.container}>
+        <PokemonContainer>
           <PokemonHeader name={"Ninetales"} number={"038A"} />
-          <div className={styles.infoContainer}>
-            <PokemonInfo info={pokemonInfo} />
-            <div className={styles.pokemonType}>
-              <PokemonType>
-                <Image
-                  src={iceType}
-                  alt={"iceType"}
-                  height={64}
-                  width={64}
-                />
-                <Image
-                  src={fairyType}
-                  alt={"fairyType"}
-                  height={64}
-                  width={64}
-                />
-              </PokemonType>
-              <PokemonStats stats={pokemonStats} />
-            </div>
-          </div>
-
-          <div className={styles.teste}>
-            <Image
-              className={styles.image}
-              src={ninetales}
-              alt={"ninetales image"}
-            />
-          </div>
-
-          <div className={styles.teste}>
-            <h1 className={styles.japoneseName}>キュウコン</h1>
-          </div>
-        </div>
+          <PokemonInfo info={pokemonInfo} />
+          <PokemonRightPart>
+            <PokemonType>
+              <Image src={iceType} alt={"iceType"} height={64} width={64} />
+              <Image src={fairyType} alt={"fairyType"} height={64} width={64} />
+            </PokemonType>
+            <PokemonStats stats={pokemonStats} />
+          </PokemonRightPart>
+          <Image
+            priority
+            className={styles.image}
+            src={ninetales}
+            alt={"ninetales image"}
+          />
+          <PokemonJaponeseName name={"キュウコン"} />
+        </PokemonContainer>
       </div>
     </>
   );
