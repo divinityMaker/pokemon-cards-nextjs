@@ -1,6 +1,6 @@
 # Pokemon cards
  ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
- ![PokemonCard](https://i.imgur.com/zY6VLHo.png)
+ ![PokemonCard](https://i.imgur.com/zwYQdCr.png)
 ### Requirements
 * [![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com)
 
@@ -20,7 +20,11 @@ And install it
 
     $ npm install
 
-##### Running
+#### Running
 In the project's folder
 
     $ npm run dev
+
+#### Credits
+* [UI](https://dribbble.com/shots/6175056-Pok-dex)
+* [Home cards](https://www.youtube.com/watch?v=M421fR3TYxg)
