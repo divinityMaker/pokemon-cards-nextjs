@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    width: auto;
+  height: 100vh;
+  width: auto;
 }
 
 :root {
-    /* BACKGROUND COLORS */
-    --ninetales-background-color: #B1CAEB;
-    --giratina-background-color: #60605F;
-    --serperior-background-color: #8ABE9E;
-    --umbreon-background-color: #525963;
-    --shinx-background-color: #6A909D;
-    --thundurus-background-color: #A8D2E1;
-    --serperior-background-color: #82C4DC;
+  /* BACKGROUND COLORS */
+  --ninetales-background-color: #b1caeb;
+  --giratina-background-color: #60605f;
+  --serperior-background-color: #8abe9e;
+  --umbreon-background-color: #525963;
+  --shinx-background-color: #6a909d;
+  --thundurus-background-color: #a8d2e1;
 }
