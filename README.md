@@ -18,9 +18,9 @@ Enter the project folder
 
 And install it
 
-    $ yarn install
+    $ npm install
 
 ##### Running
 In the project's folder
 
-    $ yarn run dev
+    $ npm run dev
