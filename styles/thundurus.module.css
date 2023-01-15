@@ -1,0 +1,32 @@
+.main {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--thundurus-background-color);
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    top: 45%;
+    position: absolute;
+    height: 20rem;
+    width: 16rem;
+}
+
+@media only screen and (min-width: 1024px)  {
+    .image {
+        top: 20%;
+        height: 30rem;
+        width: 30rem;
+        left: 18rem
+    }
+
+}
+
+@media only screen and (min-height: 601px) {
+    .main {
+        height: 100vh;
+    }
+}

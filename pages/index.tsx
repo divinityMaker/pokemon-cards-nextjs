@@ -5,6 +5,8 @@ import styles from "../styles/Home.module.css";
 import ninetales from "../assets/ninetales.svg";
 import giratina from "../assets/giratina.svg";
 import serperior from "../assets/serperior.svg";
+import thundurus from "../assets/thundurus.svg";
+
 
 const Home = () => {
   return (
@@ -38,6 +40,17 @@ const Home = () => {
               src={serperior}
               className={styles.image}
               alt={"serperior image"}
+            />
+          </Link>
+        </div>
+      </div>
+      <div className={styles.box}>
+        <div className={styles.content}>
+          <Link href={"/thundurus"}>
+            <Image
+              src={thundurus}
+              className={styles.image}
+              alt={"Thundurus image"}
             />
           </Link>
         </div>
